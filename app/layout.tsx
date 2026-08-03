@@ -14,14 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: `${SITE_CONFIG.companyName} — Official Site Under Construction`,
-  description: SITE_CONFIG.subtext,
-  keywords: [SITE_CONFIG.companyName, "Enterprise Networking", "Site Under Construction"],
-  openGraph: {
-    title: `${SITE_CONFIG.companyName} — Official Site Under Construction`,
-    description: SITE_CONFIG.subtext,
-    type: "website",
-  },
+  title: `${SITE_CONFIG.companyName} — Site Under Construction`,
+  description: "This site is under construction. Check back soon.",
 };
 
 export default function RootLayout({
