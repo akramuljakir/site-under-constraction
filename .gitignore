@@ -1,0 +1,69 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/e2e/.auth/
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# Local env templates with real credentials — keep on disk only
+experiment.env.example
+demo.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+.pnpm-store
+
+/src/generated/prisma
+
+# Sentry Config File
+.env.sentry-build-plugin
+
+# Personal config snapshot (prisma/seeds/data/personal.local.json) is COMMITTED
+# on purpose — it is scrubbed of secrets (no password hashes; see
+# personalSnapshot.ts) and carries your real config for `pnpm seed:personal`.
+
+# Thermal relay local config (contains printer IP)
+tools/thermal-relay/config.json
+tools/thermal-relay/node_modules/
+block.env.local
+.block.env.local
+.block.env
