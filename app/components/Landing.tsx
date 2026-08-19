@@ -2,11 +2,11 @@ import { SITE_CONFIG } from "../config/siteConfig";
 
 export function getAlternateLinks(host: string): string[] {
   const sub = host.split(".")[0].toLowerCase();
-  let base = sub.replace(/\d+$/, "");
 
-  if (!(base in SITE_CONFIG.subdomainSeries)) {
-    base = SITE_CONFIG.defaultSeries;
-  }
+  const matched = Object.keys(SITE_CONFIG.subdomainSeries).find((key) =>
+    sub.startsWith(key)
+  );
+  const base = matched ?? SITE_CONFIG.defaultSeries;
 
   const count = SITE_CONFIG.subdomainSeries[base];
   return [base, ...Array.from({ length: count }, (_, i) => `${base}${i + 1}`)]
